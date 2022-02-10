@@ -1,3 +1,7 @@
+---
+title: Student Mission Control
+---
+
 # Student Mission Control
 
 > This website is under construction.
