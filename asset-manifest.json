@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.75e95bce.chunk.css",
-    "main.js": "/static/js/main.f15b72ca.chunk.js",
-    "main.js.map": "/static/js/main.f15b72ca.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d3dde503.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d3dde503.js.map",
+    "main.js": "/static/js/main.aa3abdf2.chunk.js",
+    "main.js.map": "/static/js/main.aa3abdf2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.35baad1a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.35baad1a.js.map",
     "static/js/2.a75387e8.chunk.js": "/static/js/2.a75387e8.chunk.js",
     "static/js/2.a75387e8.chunk.js.map": "/static/js/2.a75387e8.chunk.js.map",
     "static/js/3.7cc1aad1.chunk.js": "/static/js/3.7cc1aad1.chunk.js",
@@ -21,8 +21,8 @@
     "static/js/8.7ff91454.chunk.js.map": "/static/js/8.7ff91454.chunk.js.map",
     "static/js/9.a6921b03.chunk.js": "/static/js/9.a6921b03.chunk.js",
     "static/js/9.a6921b03.chunk.js.map": "/static/js/9.a6921b03.chunk.js.map",
-    "static/js/10.8c3dc431.chunk.js": "/static/js/10.8c3dc431.chunk.js",
-    "static/js/10.8c3dc431.chunk.js.map": "/static/js/10.8c3dc431.chunk.js.map",
+    "static/js/10.6f8cbf2d.chunk.js": "/static/js/10.6f8cbf2d.chunk.js",
+    "static/js/10.6f8cbf2d.chunk.js.map": "/static/js/10.6f8cbf2d.chunk.js.map",
     "static/js/11.ccd51d95.chunk.js": "/static/js/11.ccd51d95.chunk.js",
     "static/js/11.ccd51d95.chunk.js.map": "/static/js/11.ccd51d95.chunk.js.map",
     "static/js/12.7cae174f.chunk.js": "/static/js/12.7cae174f.chunk.js",
@@ -56,7 +56,7 @@
     "static/media/lauren_mock.png": "/static/media/lauren_mock.ae35b069.png",
     "static/media/liam_kennedy.png": "/static/media/liam_kennedy.b92de521.png",
     "static/media/michael_ball.png": "/static/media/michael_ball.a6f7723e.png",
-    "static/media/s1.mdx": "/static/media/s1.1801a0a1.mdx",
+    "static/media/s1.mdx": "/static/media/s1.79515e9d.mdx",
     "static/media/saketh.png": "/static/media/saketh.54d88d05.png",
     "static/media/samantha_thorstensen.png": "/static/media/samantha_thorstensen.604ef629.png",
     "static/media/satellite.daa05f1d.svg": "/static/media/satellite.daa05f1d.svg",
@@ -71,9 +71,9 @@
     "static/media/vihan.png": "/static/media/vihan.6a8565bc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d3dde503.js",
+    "static/js/runtime-main.35baad1a.js",
     "static/js/2.a75387e8.chunk.js",
     "static/css/main.75e95bce.chunk.css",
-    "static/js/main.f15b72ca.chunk.js"
+    "static/js/main.aa3abdf2.chunk.js"
   ]
 }
