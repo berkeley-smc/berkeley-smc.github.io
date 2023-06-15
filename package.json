@@ -1,7 +1,7 @@
 {
   "name": "smc",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://smc.berkeley.edu",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
