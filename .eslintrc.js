@@ -22,4 +22,18 @@ module.exports = {
     'no-non-null-assertion': 'off',
     "import/no-webpack-loader-syntax": "off"
   },
+  module: {
+    rules: [
+        {
+            test: /\.mdx?$/,
+            use: [
+                {
+                    loader: 'babel-loader', 
+                    options: {presets: ['@babel/preset-env', "@babel/preset-react"]}
+                }, 
+                '@mdx-js/loader'
+            ]
+        }
+    ]
+}
 };
