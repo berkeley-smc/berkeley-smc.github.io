@@ -338,7 +338,6 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
           Expedition {props.unit}
         </Text>
         
-        
         <Text color="#FFFFFF" pt="20px" pl="230px">
           {/* Current-All: {useEnergyData().S4000002 + useEnergyData().S6000005 + useEnergyData().P4000002 + useEnergyData().P6000005 + useEnergyData().S4000005 + useEnergyData().S6000002 + useEnergyData().P4000005 + useEnergyData().P6000002} Amps */}
         </Text>
