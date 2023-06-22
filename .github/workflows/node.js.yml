@@ -29,7 +29,7 @@ jobs:
         token: ${{ secrets.DEPLOYMENT_KEY }}
     - run: npm ci --legacy-peer-deps
 #     - run: CI=false npm run build --if-present
-    - run: git remote add https://github.com/berkeley-smc/smc.berkeley.edu.git
+    - run: git remote add origin https://github.com/berkeley-smc/smc.berkeley.edu.git
     - run: git config --global user.email "vaikundh.j@gmail.com"
     - run: git config --global user.name "Vaikundh"
     - run: CI=false npm run deploy
