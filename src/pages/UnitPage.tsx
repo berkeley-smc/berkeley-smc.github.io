@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Text, Flex, Box } from '@chakra-ui/react';
+import { Button, Text, Link, Flex, Box } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import Gradient from '../Assets/Gradients/unitgradient.svg'
@@ -26,7 +26,7 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
   const [pitch, setPitch] = useState([] as number[])
   const [roll, setRoll] = useState([] as number[])
 
-  
+
 
   useEffect(() => {
     getNumLabs();
@@ -56,7 +56,7 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
     navigate(s);
   };
 
-  //TODO: change button to arrow ..
+  // TODO: change button to arrow ..
   const goToUnits = () => {
     navigate('/expeditions');
   };
@@ -71,23 +71,23 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
 
   // const getCurrentAll = () => {
   //   let a = currentData;
-  
-  //   a.push(truncate((useEnergyData().S4000002 
 
-  //     + useEnergyData().S6000005 
-  //     + useEnergyData().P4000002 
-  //     + useEnergyData().P6000005 
-  //     + useEnergyData().S4000005 
-  //     + useEnergyData().S6000002 
-  //     + useEnergyData().P4000005 
+  //   a.push(truncate((useEnergyData().S4000002
+
+  //     + useEnergyData().S6000005
+  //     + useEnergyData().P4000002
+  //     + useEnergyData().P6000005
+  //     + useEnergyData().S4000005
+  //     + useEnergyData().S6000002
+  //     + useEnergyData().P4000005
   //     + useEnergyData().P6000002),2));
   //   // }
-    
+
   //   useEffect(()=> {
   //       // if (currentData.length !== a.length) {
   //       a = a.filter((value, index, array) => array.indexOf(value) === index).map(function(x) { return x * -1; });
   //       const id = setInterval(() => setCurrentData(a.slice(a.length-300)), 1500);
-        
+
   //       // setCurrentData(b.slice(b.length-300));
   //       // console.log(currentData);
   //       return () => {
@@ -95,7 +95,7 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
   //       };
   //     // }
   //   }, [])
-    
+
   //   return a[a.length - 1];
   // }
 
@@ -104,29 +104,29 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
   // }
   // const getGeoYaw = () => {
   //   const a = yaw;
-  
-  //   a.push(truncate((Math.atan2(2.0*(useGeometryData().Rx*useGeometryData().Ry 
-  //   + useGeometryData().Rw*useGeometryData().Rz), useGeometryData().Rw*useGeometryData().Rw 
-  //   + useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry 
+
+  //   a.push(truncate((Math.atan2(2.0*(useGeometryData().Rx*useGeometryData().Ry
+  //   + useGeometryData().Rw*useGeometryData().Rz), useGeometryData().Rw*useGeometryData().Rw
+  //   + useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry
   //   - useGeometryData().Rz*useGeometryData().Rz))*(180/Math.PI), 3));
   //   // }
-    
+
   //   useEffect(()=> {
   //       // if (currentData.length !== a.length) {
-        
+
   //       // const a = yaw; //.filter((value, index, array) => array.indexOf(value) === index).map(function(x) { return x * -1; });
-        
+
   //       // // console.log(yaw);
   //       // const id = setInterval(() => setYaw(a.slice(a.length-50)), 3000);
-        
+
   //       // // setCurrentData(a.slice(a.length-75));
   //       // console.log(yaw);
   //       // // return () => {
   //       // //   clearInterval(id);
   //       // // };
-        
+
   //       const id = setInterval(() => setYaw(a.filter(onlyUnique).slice(a.length-75)), 1500);
-        
+
   //       // setCurrentData(a.slice(a.length-75));
   //       console.log(yaw);
   //       return () => {
@@ -135,27 +135,27 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
   //       };
   //     // }
   //   }, [])
-    
-  //   // return truncate((Math.atan2(2.0*(useGeometryData().Rx*useGeometryData().Ry 
-  //   // + useGeometryData().Rw*useGeometryData().Rz), useGeometryData().Rw*useGeometryData().Rw 
-  //   // + useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry 
+
+  //   // return truncate((Math.atan2(2.0*(useGeometryData().Rx*useGeometryData().Ry
+  //   // + useGeometryData().Rw*useGeometryData().Rz), useGeometryData().Rw*useGeometryData().Rw
+  //   // + useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry
   //   // - useGeometryData().Rz*useGeometryData().Rz))*(180/Math.PI), 3);
   //   return a.filter(onlyUnique)[a.filter(onlyUnique).length - 1]
   // }
-  
+
   // const getGeoPitch = () => {
   //   const a = pitch;
-  
-  //   a.push(truncate((Math.asin(-2.0*(useGeometryData().Rx*useGeometryData().Rz 
+
+  //   a.push(truncate((Math.asin(-2.0*(useGeometryData().Rx*useGeometryData().Rz
   //   - useGeometryData().Rw*useGeometryData().Ry)))*(180/Math.PI),3));
   //   // }
   //   // }
-    
-    
+
+
 
   //   useEffect(()=> {
   //       // if (currentData.length !== a.length) {
-        
+
   //       // const a = pitch //.filter((value, index, array) => array.indexOf(value) === index).map(function(x) { return x * -1; });
   //       const id = setInterval(() => setPitch(a.filter(onlyUnique).slice(a.length-75)), 1500);
   //       // setPitch(a.filter(onlyUnique).slice(a.length-75));
@@ -172,16 +172,16 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
 
   // const getGeoRoll = () => {
   //   const a = roll;
-  
-  //   a.push(truncate((Math.atan2(2.0*(useGeometryData().Ry*useGeometryData().Rz 
-  //   + useGeometryData().Rw*useGeometryData().Rx), useGeometryData().Rw*useGeometryData().Rw 
-  //   - useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry 
+
+  //   a.push(truncate((Math.atan2(2.0*(useGeometryData().Ry*useGeometryData().Rz
+  //   + useGeometryData().Rw*useGeometryData().Rx), useGeometryData().Rw*useGeometryData().Rw
+  //   - useGeometryData().Rx*useGeometryData().Rx - useGeometryData().Ry*useGeometryData().Ry
   //   + useGeometryData().Rz*useGeometryData().Rz))*(180/Math.PI),3));
   //   // }
-    
+
   //   useEffect(()=> {
   //       // if (currentData.length !== a.length) {
-        
+
   //       // const a = roll //.filter((value, index, array) => array.indexOf(value) === index).map(function(x) { return x * -1; });
   //       // setRoll(a.slice(a.length-50));
   //       const id = setInterval(() => setRoll(a.filter(onlyUnique).slice(a.length-75)), 1500);
@@ -192,11 +192,11 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
   //       // console.log(roll);
   //     // }
   //   }, [])
-    
+
   //   return a[a.length - 1];
   // }
 
-  if (props.unit === 1){
+  if (props.unit === 1) {
     {/* GEOMETRY */}
     return (
       <Box minHeight="80vh" bgImage={Gradient}>
@@ -212,30 +212,30 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
               hadow: "0 0 15px #FFFFFF"
             }}
             _active={{
-  
+
             }}
             ></ArrowBackIcon>
         </Box>
         <Text variant='H2' pt="20px" pl="230px" color="#FFFFFF">
-          Expedition {props.unit}
+          <a href="" target="_blank">Expedition {props.unit}</a>
         </Text>
-  
+
         <Text color="#FFFFFF" pt="20px" pl="230px">
           {/* Yaw: {getGeoYaw()}° */}
           {/* Yaw: -4.019° */}
 
         </Text>
-        
+
         <Text color="#FFFFFF" pt="20px" pl="230px">
           {/* Pitch: {getGeoPitch()}° */}
           {/* Pitch: -8.567° */}
         </Text>
-  
+
         <Text color="#FFFFFF" pt="20px" pl="230px">
           {/* Roll: {getGeoRoll()}° */}
           {/* Roll: 0.955° */}
         </Text>
-  
+
         <Flex direction="row" pl="230px">
           {labsArr.map((val) => {
             return (
@@ -277,23 +277,23 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
               hadow: "0 0 15px #FFFFFF"
             }}
             _active={{
-  
+
             }}
             ></ArrowBackIcon>
         </Box>
         <Text variant='H2' pt="20px" pl="230px" color="#FFFFFF">
           Expedition {props.unit}
         </Text>
-        
-        
+
+
         <Text color="#FFFFFF" pt="20px" pl="230px">
 
           {/* Current-All: {truncate(getCurrentAll()*-1,2)} Amps */}
 
         </Text>
-  
-        
-  
+
+
+
         <Flex direction="row" pl="230px">
           {labsArr.map((val) => {
             return (
@@ -330,25 +330,25 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
               hadow: "0 0 15px #FFFFFF"
             }}
             _active={{
-  
+
             }}
             ></ArrowBackIcon>
         </Box>
         <Text variant='H2' pt="20px" pl="230px" color="#FFFFFF">
           Expedition {props.unit}
         </Text>
-        
+
         <Text color="#FFFFFF" pt="20px" pl="230px">
           {/* Current-All: {useEnergyData().S4000002 + useEnergyData().S6000005 + useEnergyData().P4000002 + useEnergyData().P6000005 + useEnergyData().S4000005 + useEnergyData().S6000002 + useEnergyData().P4000005 + useEnergyData().P6000002} Amps */}
         </Text>
-  
-  
+
+
         {/* <Sparklines data={useRollData()} limit={20 }>
           <SparklinesLine style={{ fill: "none" }} />
           <SparklinesSpots />
         </Sparklines> */}
         {/* {useRollData()} */}
-  
+
         <Flex direction="row" pl="230px">
           {labsArr.map((val) => {
             return (

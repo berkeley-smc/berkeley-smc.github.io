@@ -18,6 +18,7 @@
     "@types/react": "^17.0.44",
     "@types/react-dom": "^17.0.16",
     "@types/three": "^0.139.0",
+    "debug": "^4.3.4",
     "framer-motion": "^3.10.6",
     "globe.gl": "^2.26.1",
     "lightstreamer-client-web": "^8.0.3",

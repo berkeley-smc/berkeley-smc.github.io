@@ -49,7 +49,7 @@ const ISS = [{
     "role": "ARISS",
     "contact": "hunter.p.mcnamara@gmail.com"
   }, {
-    "pic": "default",
+    "pic": "justin-amado",
     "name": "Justin Amado",
     "role": "Tech Expert",
     "contact": "jamado@issnationallab.org"
@@ -76,7 +76,7 @@ const ISS = [{
     "role": "BJC Project Manager",
     "contact": "lmock@berkeley.edu"
   },  {
-    "pic": "default",
+    "pic": "anirudhan-badrinath",
     "name": "Anirudhan Badrinath",
     "role": "Curriculum Author",
     "contact": "abadrinath@berkeley.edu"
@@ -153,7 +153,7 @@ const AboutTeam = () => {
         <ProfileGrid list={ISS} />
         <Box height="128px"/>
         <Text variant="H3" fontSize="32px" lineHeight="41px" letterSpacing="0.37px">
-                UC Berkeley Team 
+                UC Berkeley Team
         </Text>
         <Box height="43px"/>
         <ProfileGrid list={Berkeley} />

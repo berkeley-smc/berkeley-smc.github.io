@@ -10,12 +10,41 @@ const Contact = () => {
     formState: { errors, isSubmitting },
   } = useForm()
 
-  function onSubmit(values: any) {
+    // Example POST method implementation:
+  async function postData(url = "", data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  function onSubmit(form_data: any) {
+    //     var formURL = 'https://arp3ezzi5l.execute-api.us-west-2.amazonaws.com/prod/send-email';
+    // var formData = $form.serializeArray().reduce(function(acc, curr) {
+    //   acc[curr.name] = curr.value;
+    //   return acc;
+    // }, {});
+    form_data['destination'] = 'contact-smc@berkeley.edu';
     return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        console.log(JSON.stringify(values, null, 2))
+      const email_url = 'https://arp3ezzi5l.execute-api.us-west-2.amazonaws.com/prod/send-email';
+      postData(email_url, form_data).then((data) => {
+        console.log(data); // JSON data parsed by `data.json()` call
         resolve()
-      }, 3000)
+      });
+      // setTimeout(() => {
+      //   console.log(JSON.stringify(form_data, null, 2))
+      // }, 3000)
     })
   }
     return (
@@ -130,13 +159,13 @@ const Contact = () => {
         <Box width="35%" float="right">
           <Text variant="H4" mt="60px" mb="30px">Address</Text>
           <Text variant="Body" color="#fff" lineHeight="30px">
-          The Beauty and Joy of Computing <br />
+          UC Berkeley <br />
           777 Soda Hall <br />
           Berkeley, CA 94720
           </Text>
           <Text variant="H4" mt="100px" mb="30px">Email Address</Text>
           <Text variant="Body" color="#fff">
-            contact@bjc.berkeley.edu
+            contact-smc@berkeley.edu
           </Text>
         </Box>
       </Box>
