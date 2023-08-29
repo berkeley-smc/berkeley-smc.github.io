@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Text, Link, Flex, Box } from '@chakra-ui/react';
+import { Button, Text, Flex, Box } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import Gradient from '../Assets/Gradients/unitgradient.svg'
@@ -58,7 +58,7 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
 
   // TODO: change button to arrow ..
   const goToUnits = () => {
-    navigate('/expeditions');
+    navigate('/units');
   };
 
   const truncate = function (value: number, num_digits: number) {
