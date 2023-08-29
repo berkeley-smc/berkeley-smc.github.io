@@ -16,14 +16,14 @@ const Home = () => {
     <div className="App">
       <Box bg='smcdarkgrey'>
         <Globey />
-        
+
         <Text variant="H2" fontSize={{ base: '24px', md: '40px', lg: '53px' }}pos="absolute" left="3%" top="13%">
           Student Mission Control
         </Text>
         <Text variant="H4" fontSize={{ base: '24px', md: '40px', lg: '35px' }} pos="absolute" left="3%" top="20%">
           by ISS National Lab and UC Berkeley
         </Text>
-        <Button variant="primary" pos="absolute" left="3%" top="27%" onClick={() => nav()} >
+        <Button variant="primary" pos="absolute" left="3%" top="27%" onClick={() => nav()}>
           Explore the Curriculum
         </Button>
       </Box>
