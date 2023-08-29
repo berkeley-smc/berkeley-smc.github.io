@@ -30,16 +30,16 @@ const Footer = () => {
                 </Link>
               </Stack>
             </Stack>
-            
+
           </Stack>
           <Stack align={'center'}>
             <Link href='https://www.issnationallab.org/'>
               <Image src='/images/ISSLogo.svg'/>
             </Link>
-            
+
             <Link href='https://www.berkeley.edu'>
               <Image src='/images/berkeleylogo.svg'/>
-            </Link> 
+            </Link>
           </Stack>
           <Stack align={'flex-start'}>
             <Link variant="footerBold" href={'/'}> Home </Link>
@@ -51,17 +51,17 @@ const Footer = () => {
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
-            <Link variant="footerBold" href={'/units'}> Curriculum </Link>
-            <Link variant="footer" href={'/units'}>
+            <Link variant="footerBold" href={'#units'}> Curriculum </Link>
+            <Link variant="footer" href={'#units'}>
               For Students
             </Link>
-            <Link variant="footer" href={'/units'}>
+            <Link variant="footer" href={'#units'}>
               For teachers
             </Link>
           </Stack>
           <Stack align={'flex-start'}>
-            <Link variant="footerBold" href={'/resources'}> 
-              Resources 
+            <Link variant="footerBold" href={'/resources'}>
+              Resources
             </Link>
             <Link variant="footer" href={'/'}>
               Live Data
