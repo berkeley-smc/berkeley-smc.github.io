@@ -58,7 +58,7 @@ const UnitPage = (props: UnitPageProps, expiryTimestamp: Date) => {
 
   // TODO: change button to arrow ..
   const goToUnits = () => {
-    navigate('/units');
+    navigate('/expeditions');
   };
 
   const truncate = function (value: number, num_digits: number) {
